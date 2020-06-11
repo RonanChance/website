@@ -47,7 +47,11 @@ class HomePage extends StatelessWidget {
                       left: 150,
                       child: Text(
                         'Ronan Chance Donovan',
-                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 35.0,),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 35.0,
+                        ),
                       )),
                   SizedBox(
                     height: 100,
@@ -83,8 +87,11 @@ class HomePage extends StatelessWidget {
         height: 100.0,
         width: 100.0,
         child: FittedBox(
-          child:
-              FloatingActionButton(child: Icon(Icons.email), onPressed: () {}),
+          child: FloatingActionButton(
+              child: Icon(Icons.email),
+              onPressed: () {
+                html.window.open("https://github.com/RonanChance", "Git");
+              }),
         ),
       ),
     );

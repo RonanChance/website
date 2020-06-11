@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'clipper.dart';
 import 'dart:html' as html;
 
 void main() => runApp(MyApp());
@@ -25,7 +24,6 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           ClipPath(
-            clipper: MyClipper(),
             child: Container(
               height: 750,
               width: double.infinity,

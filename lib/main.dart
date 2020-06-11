@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'clipper.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'dart:html' as html;
 
 void main() => runApp(MyApp());
@@ -46,17 +45,12 @@ class HomePage extends StatelessWidget {
                     height: 250,
                   ),
                   Positioned(
-                    top: 20,
-                    left: 150,
-                    child: Text(
-                      "Ronan Chance Donovan",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 40,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                  ),
+                      top: 20,
+                      left: 150,
+                      child: Text(
+                        'Ronan Chance Donovan',
+                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 35.0,),
+                      )),
                   SizedBox(
                     height: 100,
                   ),

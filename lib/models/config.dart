@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:jfkdev/app_localization.dart';
-import 'package:jfkdev/utils/utils.dart';
+import 'package:RCD/app_localization.dart';
+import 'package:RCD/utils/utils.dart';
 import 'package:meta/meta.dart';
 
 class Config {

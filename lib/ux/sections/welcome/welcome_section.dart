@@ -1,15 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:jfkdev/theme.dart';
-import 'package:jfkdev/ux/app_icons.dart';
-import 'package:jfkdev/ux/sections/welcome/business_info.dart';
-import 'package:jfkdev/ux/sections/welcome/introduction_header.dart';
-import 'package:jfkdev/ux/sections/welcome/highlights_list.dart';
-import 'package:jfkdev/ux/sections/welcome/socials_row.dart';
-import 'package:jfkdev/ux/widgets/fill_screen.dart';
-import 'package:jfkdev/ux/widgets/wave/config.dart';
-import 'package:jfkdev/ux/widgets/wave/wave.dart';
-import 'package:jfkdev/ux/widgets/widget_utils.dart';
+import 'package:RCD/theme.dart';
+import 'package:RCD/ux/app_icons.dart';
+import 'package:RCD/ux/sections/welcome/business_info.dart';
+import 'package:RCD/ux/sections/welcome/introduction_header.dart';
+import 'package:RCD/ux/sections/welcome/highlights_list.dart';
+import 'package:RCD/ux/sections/welcome/socials_row.dart';
+import 'package:RCD/ux/widgets/fill_screen.dart';
+import 'package:RCD/ux/widgets/widget_utils.dart';
 
 class WelcomeSection extends StatefulWidget {
   const WelcomeSection({
@@ -106,42 +104,6 @@ class _WelcomeSectionState extends State<WelcomeSection> with SingleTickerProvid
                 child: BusinessInfo(animation: _businessInfoAnimation),
               ),
               const Spacer(),
-              Flexible(
-                flex: 2,
-                child: AnimatedBuilder(
-                  animation: _wavesAnimation,
-                  builder: (context, child) {
-                    return Transform.translate(
-                      offset: Offset(0.0, 250 - (Curves.fastLinearToSlowEaseIn.transform(_wavesAnimation.value) * 250)),
-                      child: child,
-                    );
-                  },
-                  child: WaveWidget(
-                    config: WaveConfigCustom(
-                      gradients: [
-                        [AppTheme.colorBackgroundPrimary, Colors.blue],
-                        [Colors.blue[800], Colors.blue[300]],
-                        [Colors.blue[900], AppTheme.colorBackgroundPrimary],
-                        [AppTheme.colorDefaultGradientOne, AppTheme.colorDefaultGradientTwo],
-                      ],
-                      durations: [
-                        35000,
-                        19440,
-                        10800,
-                        6000,
-                      ],
-                      heightPercentages: [
-                        0.20,
-                        0.23,
-                        0.25,
-                        0.30,
-                      ],
-                      gradientBegin: Alignment.bottomLeft,
-                      gradientEnd: Alignment.topRight,
-                    ),
-                  ),
-                ),
-              ),
             ],
           ),
           Align(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:jfkdev/utils/ux_utils.dart';
-import 'package:jfkdev/ux/models/ux_data.dart';
-import 'package:jfkdev/ux/widgets/animatable.dart';
-import 'package:jfkdev/ux/widgets/jfk_icon_button.dart';
+import 'package:RCD/utils/ux_utils.dart';
+import 'package:RCD/ux/models/ux_data.dart';
+import 'package:RCD/ux/widgets/animatable.dart';
+import 'package:RCD/ux/widgets/rcd_icon_button.dart';
 
 class SocialsRow extends AnimatableStatefulWidget {
   const SocialsRow({

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:jfkdev/app_localization.dart';
-import 'package:jfkdev/models/config.dart';
-import 'package:jfkdev/theme.dart';
-import 'package:jfkdev/ux/containers/main/main_container.dart';
+import 'package:RCD/app_localization.dart';
+import 'package:RCD/models/config.dart';
+import 'package:RCD/theme.dart';
+import 'package:RCD/ux/containers/main/main_container.dart';
 
 Future<void> main() async {
   final config = await Config.parseYaml('config.yaml');
 
-  runApp(JfkDevApp(config: config));
+  runApp(RCDApp(config: config));
 }
 
-class JfkDevApp extends StatelessWidget {
-  JfkDevApp({Config config}) {
+class RCDApp extends StatelessWidget {
+  RCDApp({Config config}) {
     GetIt.instance.registerSingleton<Config>(config);
   }
 

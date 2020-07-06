@@ -2,10 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:jfkdev/theme.dart';
-import 'package:jfkdev/ux/app_icons.dart';
-import 'package:jfkdev/ux/widgets/fill_screen.dart';
-import 'package:jfkdev/ux/widgets/widget_utils.dart';
+import 'package:RCD/theme.dart';
+import 'package:RCD/ux/app_icons.dart';
+import 'package:RCD/ux/widgets/fill_screen.dart';
+import 'package:RCD/ux/widgets/widget_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../theme.dart';
@@ -46,62 +46,68 @@ class _AboutMeState extends State<AboutMeSection>
     return FillScreen(
       child: Stack(
         children: <Widget>[
-          Column(
+          ListView(
+            shrinkWrap: true,
             children: <Widget>[
               // verticalMargin32,
-              Container(
-                margin: const EdgeInsets.only(
-                    top: 50, bottom: 40, left: 300, right: 300),
-                decoration: const BoxDecoration(color: Colors.transparent),
-                child: const Text(
-                  'Recent Projects & Interests',
-                  style: TextStyle(
-                      fontFamily: AppTheme.fontFamilyDefault,
-                      color: AppTheme.colorTextPrimary,
-                      fontSize: 35),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+                child: Container(
+                  decoration: const BoxDecoration(color: Colors.transparent),
+                  child: const Text(
+                    'Projects',
+                    style: TextStyle(
+                        fontFamily: AppTheme.fontFamilyDefault,
+                        color: AppTheme.colorTextPrimary,
+                        fontSize: 35),
+                  ),
+                  alignment: Alignment.center,
                 ),
               ),
-              InkWell(
-                onTap: () {
-                  launch('https://github.com/RonanChance/website');
-                },
-                child: Container(
-                  margin: const EdgeInsets.only(
-                      top: 10, bottom: 10, left: 300, right: 300),
-                  child: _buildProjectInfo(
-                      name: 'This Website!',
-                      description:
-                          'I built this website using a beta version of Flutter web in the dart programming language.',
-                      image: 'web.png'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+                child: InkWell(
+                  onTap: () {
+                    launch('https://github.com/RonanChance/website');
+                  },
+                  child: Container(
+                    child: _buildProjectInfo(
+                        name: 'This Website',
+                        description:
+                            '• I built this website using \'Hummingbird\' (hosted on Firebase) \n• Very passionate about the future of Flutter \n• Looking to learn and work with other flutter/dart developers',
+                        image: 'web.png'),
+                  ),
                 ),
               ),
-              InkWell(
-                onTap: () {
-                  launch(
-                      'https://github.com/RonanChance/competitive-programming');
-                },
-                child: Container(
-                  margin: const EdgeInsets.only(
-                      top: 10, bottom: 10, left: 300, right: 300),
-                  child: _buildProjectInfo(
-                      name: 'Competitive Programming',
-                      description:
-                          '* We hold weekly Kattis programming competitions at W&M. \n* Competed at ICPC with my team. \n* I post my solutions on GitHub - feel free to check them out!',
-                      image: 'code.png'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+                child: InkWell(
+                  onTap: () {
+                    launch(
+                        'https://github.com/RonanChance/competitive-programming');
+                  },
+                  child: Container(
+                    child: _buildProjectInfo(
+                        name: 'Competitive Programming',
+                        description:
+                            '• We hold weekly Kattis programming competitions at W&M \n• Competed at the International Collegiate Programming Contest with my team \n• Solutions on GitHub, feel free to check them out!',
+                        image: 'code.png'),
+                  ),
                 ),
               ),
-              InkWell(
-                onTap: () {
-                  launch('https://github.com/RonanChance/LifeStack');
-                },
-                child: Container(
-                  margin: const EdgeInsets.only(
-                      top: 10, bottom: 10, left: 300, right: 300),
-                  child: _buildProjectInfo(
-                      name: 'LifeStack',
-                      description:
-                          'My team won the best blockchain implementation at Hoya Hacks 2019!',
-                      image: 'lifestack.png'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+                child: InkWell(
+                  onTap: () {
+                    launch('https://github.com/RonanChance/LifeStack');
+                  },
+                  child: Container(
+                    child: _buildProjectInfo(
+                        name: 'LifeStack',
+                        description:
+                            '• My team won the best blockchain implementation at Hoya Hacks 2019! \n• Built a browser homepage using BlockStack technology \n• HTML | CSS | Python3',
+                        image: 'lifestack.png'),
+                  ),
                 ),
               ),
               // _buildExperienceRow(
@@ -142,6 +148,7 @@ class _AboutMeState extends State<AboutMeSection>
                     Text(
                       name,
                       style: const TextStyle(
+                        fontSize: 23,
                         fontWeight: FontWeight.bold,
                         color: AppTheme.colorTextPrimary,
                       ),

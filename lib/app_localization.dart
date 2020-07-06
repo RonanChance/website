@@ -1,5 +1,5 @@
 import 'package:get_it/get_it.dart';
-import 'package:jfkdev/models/config.dart';
+import 'package:RCD/models/config.dart';
 
 class AppLocalization {
   AppLocalization._();
@@ -47,8 +47,8 @@ abstract class Localization {
   String get highlightOpenSourceContributorTitle => 'William and Mary';
   String get highlightOpenSourceContributorDescription => 'Computer Science Student';
 
-  String get highlightSpeakerTitle => 'Available';
-  String get highlightSpeakerDescription => 'I\'m looking for an internship!';
+  String get highlightSpeakerTitle => 'My Future';
+  String get highlightSpeakerDescription => 'Want to collaborate on Flutter projects';
 
   String get businessInfo => 'RonanChance.com ・ Williamsburg, VA';
 

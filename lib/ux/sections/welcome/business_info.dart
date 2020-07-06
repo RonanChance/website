@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:jfkdev/app_localization.dart';
-import 'package:jfkdev/theme.dart';
-import 'package:jfkdev/ux/widgets/animatable.dart';
+import 'package:RCD/app_localization.dart';
+import 'package:RCD/theme.dart';
+import 'package:RCD/ux/widgets/animatable.dart';
 
 class BusinessInfo extends AnimatableStatefulWidget {
   const BusinessInfo({

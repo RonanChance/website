@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jfkdev/utils/ux_utils.dart';
-import 'package:jfkdev/ux/models/ux_models.dart';
+import 'package:RCD/utils/ux_utils.dart';
+import 'package:RCD/ux/models/ux_models.dart';
 
 /*
 Unusable because of the following exception:

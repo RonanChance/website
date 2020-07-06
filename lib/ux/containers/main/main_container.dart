@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jfkdev/theme.dart';
-import 'package:jfkdev/ux/sections/welcome/welcome_section.dart';
-import 'package:jfkdev/ux/sections/about/about_me.dart';
+import 'package:RCD/theme.dart';
+import 'package:RCD/ux/sections/welcome/welcome_section.dart';
+import 'package:RCD/ux/sections/about/about_me.dart';
 
 class MainContainer extends StatefulWidget {
   @override

@@ -42,13 +42,13 @@ abstract class Localization {
   String get introductionSuffix => '.';
 
   String get highlightSoftwareDeveloperTitle => 'Software Developer';
-  String get highlightSoftwareDeveloperDescription => 'Flutter & Dart, Python, and more!';
+  String get highlightSoftwareDeveloperDescription => 'Python, C/C++, Java';
 
   String get highlightOpenSourceContributorTitle => 'William and Mary';
   String get highlightOpenSourceContributorDescription => 'Computer Science Student';
 
   String get highlightSpeakerTitle => 'My Future';
-  String get highlightSpeakerDescription => 'Want to collaborate on Flutter projects';
+  String get highlightSpeakerDescription => 'Building Data Driven Applications';
 
   String get businessInfo => 'RonanChance.com ・ Williamsburg, VA';
 
